@@ -95,7 +95,7 @@ function [bestHyperParameter] = innerLoop(inputs,targets,k)
     hyperparameterInformation = cell(1,5);
 
     %Box constraint values
-    cValues = [0.01, 0.05, 0.1, 0.5 , 1 , 5 , 10, 50, 100, 500, 1000];
+    cValues = [0.01, 0.05, 0.1, 0.5 , 1 , 5 , 10];
 
     %polynomial order
     pOrder = [2,3,4];

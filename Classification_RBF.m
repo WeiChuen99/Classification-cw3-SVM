@@ -43,6 +43,7 @@ supportVectors = zeros(1,10);
 linearPredictions = [];
 predictionCat = [];
 
+currentModelParameters = innerLoop(inputs,targets,5);
 %outerloop
 for i = 1:10
     fprintf("Fold %d\n",i);
@@ -50,7 +51,7 @@ for i = 1:10
     [trainingInputs, trainingTargets, testingInputs, testingTargets] = myCVPartition(foldLength, numOfExamples, i, P, k, inputs , targets);  
     fprintf("InnerLoop Start of Fold %d\n",i);
     % Do inner cross validation
-    currentModelParameters = innerLoop(trainingInputs,trainingTargets,5);
+    % currentModelParameters = innerLoop(trainingInputs,trainingTargets,5);
 
     % train the model
     fprintf("creating model of Fold %d\n",i);
